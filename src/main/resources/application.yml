@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: gestaodetarefas
+  datasource:
+    url: jdbc:postgresql://localhost:5433/esig_task
+    username: admin
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
