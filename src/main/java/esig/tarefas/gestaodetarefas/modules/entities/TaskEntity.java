@@ -21,7 +21,7 @@ public class TaskEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Length(min = 3, max = 10, message = "O título deve conter no mínimo 3 caracteres.")
+    @Length(min = 3, message = "O título deve conter no mínimo 3 caracteres.")
     private String title;
 
     @Length(min = 10, message = "A descrição da tarefa deve conter no mínimo 10 caracteres para fornecer detalhes adequados sobre a tarefa.")

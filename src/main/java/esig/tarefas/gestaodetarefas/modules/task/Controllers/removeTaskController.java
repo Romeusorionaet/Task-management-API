@@ -18,7 +18,7 @@ public class removeTaskController {
     @Autowired
     private RemoveTaskUseCase removeTaskUseCase;
 
-    @DeleteMapping("/remove/taskId/{taskId}")
+    @DeleteMapping("/remove/{taskId}")
     public ResponseEntity<Object> create(@PathVariable UUID taskId) {
         try {
             this.removeTaskUseCase.execute(taskId);
