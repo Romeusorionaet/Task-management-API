@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import esig.tarefas.gestaodetarefas.exceptions.InvalidDateException;
-import esig.tarefas.gestaodetarefas.modules.entity.TaskEntity;
+import esig.tarefas.gestaodetarefas.modules.entities.TaskEntity;
 import esig.tarefas.gestaodetarefas.modules.repository.TaskRepository;
 
 @Service

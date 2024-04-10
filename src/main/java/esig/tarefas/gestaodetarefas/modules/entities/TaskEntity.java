@@ -1,4 +1,4 @@
-package esig.tarefas.gestaodetarefas.modules.entity;
+package esig.tarefas.gestaodetarefas.modules.entities;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
