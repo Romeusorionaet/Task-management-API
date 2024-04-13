@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import esig.tarefas.gestaodetarefas.exceptions.InvalidDateException;
 import esig.tarefas.gestaodetarefas.exceptions.TaskNotFoundException;
+import esig.tarefas.gestaodetarefas.modules.entities.StatusTask;
 import esig.tarefas.gestaodetarefas.modules.entities.TaskEntity;
 import esig.tarefas.gestaodetarefas.modules.repository.TaskRepository;
 
@@ -37,6 +38,7 @@ public class UpdateTaskUseCase {
         task.setDeadline(taskEntity.getDeadline());
         task.setResponsibleUser(taskEntity.getResponsibleUser());
         task.setPriority(taskEntity.getPriority());
+        task.setStatus(StatusTask.PROGRESS);
         task.setCreatedAt(taskEntity.getCreatedAt());
 
         this.taskRepository.save(task);
