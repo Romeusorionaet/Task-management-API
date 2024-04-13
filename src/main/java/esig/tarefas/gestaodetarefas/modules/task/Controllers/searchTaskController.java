@@ -19,16 +19,14 @@ public class searchTaskController {
 
     @GetMapping("/search")
     public ResponseEntity<Object> create(
-            @RequestParam String title,
-            @RequestParam String description,
+            @RequestParam String titleOrDescription,
             @RequestParam(required = false) Integer priority,
             @RequestParam String responsibleUser,
             @RequestParam(required = false) StatusTask status) {
 
         try {
             var result = this.searchTaskUseCase.execute(
-                    title,
-                    description,
+                    titleOrDescription,
                     priority,
                     responsibleUser,
                     status);

@@ -18,13 +18,12 @@ public class SearchTaskUseCase {
     private TaskRepository taskRepository;
 
     public List<TaskEntity> execute(
-            String title,
-            String description,
+            String titleOrDescription,
             Integer priority,
             String responsibleUser,
             StatusTask status) {
 
-        Specification<TaskEntity> spec = TaskSpecifications.withFilters(title, description, priority, responsibleUser,
+        Specification<TaskEntity> spec = TaskSpecifications.withFilters(titleOrDescription, priority, responsibleUser,
                 status);
         return taskRepository.findAll(spec);
     }
