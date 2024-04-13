@@ -34,7 +34,7 @@ public class TaskEntity {
     private String responsibleUser;
 
     @Range(min = 1, max = 10, message = "O valor esperado deve ser entre 1 a 10.")
-    private int priority;
+    private Integer priority;
 
     private LocalDateTime deadline;
 
