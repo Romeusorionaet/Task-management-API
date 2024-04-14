@@ -2,6 +2,7 @@ package esig.tarefas.gestaodetarefas.utils;
 
 import org.springframework.data.jpa.domain.Specification;
 
+import esig.tarefas.gestaodetarefas.modules.entities.PriorityTask;
 import esig.tarefas.gestaodetarefas.modules.entities.StatusTask;
 import esig.tarefas.gestaodetarefas.modules.entities.TaskEntity;
 import jakarta.persistence.criteria.CriteriaBuilder;
@@ -11,7 +12,7 @@ import jakarta.persistence.criteria.Root;
 public class TaskSpecifications {
 
     public static Specification<TaskEntity> withFilters(String titleOrDescription,
-            Integer priority,
+            PriorityTask priority,
             String responsibleUser,
             StatusTask status) {
         return (Root<TaskEntity> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) -> {

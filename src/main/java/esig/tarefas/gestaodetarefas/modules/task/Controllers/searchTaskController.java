@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import esig.tarefas.gestaodetarefas.modules.entities.PriorityTask;
 import esig.tarefas.gestaodetarefas.modules.entities.StatusTask;
 import esig.tarefas.gestaodetarefas.modules.task.useCases.SearchTaskUseCase;
 
@@ -20,7 +21,7 @@ public class searchTaskController {
     @GetMapping("/search")
     public ResponseEntity<Object> create(
             @RequestParam String titleOrDescription,
-            @RequestParam(required = false) Integer priority,
+            @RequestParam(required = false) PriorityTask priority,
             @RequestParam String responsibleUser,
             @RequestParam(required = false) StatusTask status) {
 

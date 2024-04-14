@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import esig.tarefas.gestaodetarefas.modules.entities.PriorityTask;
 import esig.tarefas.gestaodetarefas.modules.entities.StatusTask;
 import esig.tarefas.gestaodetarefas.modules.entities.TaskEntity;
 import esig.tarefas.gestaodetarefas.modules.repository.TaskRepository;
@@ -19,7 +20,7 @@ public class SearchTaskUseCase {
 
     public List<TaskEntity> execute(
             String titleOrDescription,
-            Integer priority,
+            PriorityTask priority,
             String responsibleUser,
             StatusTask status) {
 

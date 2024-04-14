@@ -5,7 +5,6 @@ import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.Range;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -33,8 +32,8 @@ public class TaskEntity {
 
     private String responsibleUser;
 
-    @Range(min = 1, max = 10, message = "O valor esperado deve ser entre 1 a 10.")
-    private Integer priority;
+    @Enumerated(EnumType.ORDINAL)
+    private PriorityTask priority;
 
     private LocalDateTime deadline;
 
