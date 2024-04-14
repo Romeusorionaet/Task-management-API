@@ -26,12 +26,15 @@ public class TaskEntity {
     private UUID id;
 
     @Length(min = 3, message = "O título deve conter no mínimo 3 caracteres.")
+    @Length(max = 100, message = "O título pode conter no máximo 100 caracteres.")
     private String title;
 
     @Column(length = 2000)
     @Length(min = 10, message = "A descrição da tarefa deve conter no mínimo 10 caracteres para fornecer detalhes adequados sobre a tarefa.")
+    @Length(max = 2000, message = "A descrição da tarefa pode conter no máximo 2000 caracteres.")
     private String description;
 
+    @Length(min = 1, message = "É obrigatório indentificar o responsável pela tarefa.")
     private String responsibleUser;
 
     @Enumerated(EnumType.ORDINAL)

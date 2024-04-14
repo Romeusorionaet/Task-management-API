@@ -23,7 +23,7 @@ public class CreateTaskUseCase {
 
         var deadline = taskEntity.getDeadline();
 
-        if (deadline != null && !deadline.isAfter(futureDate)) {
+        if (deadline == null || !deadline.isAfter(futureDate)) {
             throw new InvalidDateException();
         }
 
