@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import esig.tarefas.gestaodetarefas.modules.entities.TaskEntity;
 import esig.tarefas.gestaodetarefas.modules.task.useCases.UpdateTaskUseCase;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
@@ -19,7 +21,9 @@ public class updateTaskController {
     private UpdateTaskUseCase updateTaskUseCase;
 
     @PutMapping("/update")
-    public ResponseEntity<Object> create(
+    @Tag(name = "Tarefa", description = "Informações da tarefa")
+    @Operation(summary = "Atualizar tarefa", description = "Essa função é responsável por atualizar uma tarefa. Para isso, é importante informar o id junto com os dados a serem atualizados")
+    public ResponseEntity<Object> updated(
             @Valid @RequestBody TaskEntity taskEntity) {
 
         try {

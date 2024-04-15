@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import esig.tarefas.gestaodetarefas.modules.task.useCases.RemoveTaskUseCase;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/task")
@@ -19,7 +21,9 @@ public class removeTaskController {
     private RemoveTaskUseCase removeTaskUseCase;
 
     @DeleteMapping("/remove/{taskId}")
-    public ResponseEntity<Object> create(@PathVariable UUID taskId) {
+    @Tag(name = "Tarefa", description = "Infomações da tarefa")
+    @Operation(summary = "Remover tarefa", description = "Essa função é responsável por remover uma tarefa")
+    public ResponseEntity<Object> remove(@PathVariable UUID taskId) {
         try {
             this.removeTaskUseCase.execute(taskId);
 

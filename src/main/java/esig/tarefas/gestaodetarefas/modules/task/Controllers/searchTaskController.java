@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import esig.tarefas.gestaodetarefas.modules.entities.PriorityTask;
 import esig.tarefas.gestaodetarefas.modules.entities.StatusTask;
 import esig.tarefas.gestaodetarefas.modules.task.useCases.SearchTaskUseCase;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/task")
@@ -19,7 +21,9 @@ public class searchTaskController {
     private SearchTaskUseCase searchTaskUseCase;
 
     @GetMapping("/search")
-    public ResponseEntity<Object> create(
+    @Tag(name = "Tarefa", description = "Infomações da tarefa")
+    @Operation(summary = "Filtrar tarefas", description = "Essa função é responsável por filtrar tarefas")
+    public ResponseEntity<Object> search(
             @RequestParam String titleOrDescription,
             @RequestParam(required = false) PriorityTask priority,
             @RequestParam String responsibleUser,
