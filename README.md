@@ -9,7 +9,6 @@ com as seguintes funcionalidades:</p>
 - Listar tarefas
 
 <br>
-
 <p> Esta aplicação foi desenvolvida utilizando as seguintes tecnologias: </p>
 
 - Java
