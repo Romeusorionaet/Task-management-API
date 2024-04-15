@@ -2,9 +2,9 @@ spring:
   application:
     name: gestaodetarefas
   datasource:
-    url: $(DATABASE_URL)
-    username: $(DATABASE_USERNAME)
-    password: $(DATABASE_PASSWORD)
+    url: jdbc:postgresql://aws-0-us-west-1.pooler.supabase.com:5432/postgres?user=postgres.olabpyzssqdtepqkharl&password=romeusoaresdesouto
+    username: postegres
+    password: romeusoaresdesouto
   jpa:
     hibernate:
       ddl-auto: update
