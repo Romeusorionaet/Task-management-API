@@ -16,6 +16,21 @@ com as seguintes funcionalidades:</p>
 - Spring Data JPA
 - PostgreSql
 
+<hr>
+<p>Você pode visualizar por meio de uma interface, um caso de uso de um gerenciamento de tarefa, que consome esta aplicação. Clique em <a href="https://github.com/Romeusorionaet/Task-management-WEB" target="_blank">Gestão de Tarefa</a>.</p>
+
+<hr>
+
+<h2>Aplicação pública</h2>
+
+<p>Para execultar esta API em ambiente de desenvolvimento, clone este repositório:</p>
+
+> https://github.com/Romeusorionaet/Task-management-API.git
+
+<p>Execute o comando abaixo no terminal da sua IDE. Para isso, será preciso que tenha o Docker instalado e aberto na sua máquina. Caso não tenha o Docker, <a href="https://docs.docker.com/config/daemon/start/" target="_blank">clique aqui</a>.</p>
+
+> docker-compose up
+
 <h2> EndPoints para Tarefa </h2>
 
 <p>Existem algumas precauções que devem ser observadas, e eu vou destacar cada uma delas como erros imediatamente após cada Endpoint:</p>
