@@ -31,6 +31,8 @@ com as seguintes funcionalidades:</p>
 
 > docker-compose up
 
+<p>Depois que você ter iniciado a sua aplicação em desenvolvimento com sucesso, você poderá acessar a documentação podendo assim, ter uma maior aproximação dos EndPoints, compreendendo melhor como consumir e ficar atento dos possíveis erros. <a href="http://localhost:8080/swagger-ui/index.html#/Tarefa/get" target="_blank">Documentação</a></p>
+
 <h2> EndPoints para Tarefa </h2>
 
 <p>Existem algumas precauções que devem ser observadas, e eu vou destacar cada uma delas como erros imediatamente após cada Endpoint:</p>
